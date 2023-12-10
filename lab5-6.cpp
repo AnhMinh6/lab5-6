@@ -99,15 +99,6 @@ public:
         return language;
     }
 
-    // //1 функция определяющая количество статей у автора
-    // int count_articles_by_author(const char* author) { 
-    //     int count = 0;
-    //     if (strstr(authors, author)) {              // strstr – поиск первого вхождения строки А в строку В
-    //         count++; 
-    //     }
-    //     return count;
-    // }
-
     //функция сравнения одинаковых строк
     static bool CompareStrings(const char* name1, const char* name2){ 
         return strcmp(name1, name2) == 0;
@@ -239,7 +230,7 @@ int main(){
         cout << "Введите название статьи:" << endl;
         char* title = new char[64];
         cin >> title;
-        titles[i].setAuthors(title);
+        titles[i].setTitle(title);
         delete[] title;
 
         cout << "Введите коэффициент цитируемости статьи:" << endl;
